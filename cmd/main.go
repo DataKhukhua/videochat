@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"videochat/internal/server"
+)
 
 func main() {
-	fmt.Println("gela")
+
+	if err := server.Run(); err != nil {
+		log.Fatalln()
+	}
 }
